@@ -8,7 +8,8 @@ public class BeautySaloon {
         Customer c=new Customer(name);
         System.out.println("Set a membership type: ");  
         c.setMemberType(scanner.nextLine()); //the member type is case senstive
-        if(c.getMemberType()=="")c.setMember(true);
+        if(c.getMemberType()=="Premium"||c.getMemberType()=="Gold"||c.getMemberType()=="Silver")c.setMember(true);
+        else c.setMember(false);
         Visit v=new Visit(c);
         System.out.println("Set Services Expense: ");  
         v.setServiceExpense(Double.parseDouble(scanner.nextLine()));
